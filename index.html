@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#102c23">
+<meta name="description" content="GOLEIRO PRO — preparação atlética para goleiros. Treinos, cronômetro, evolução e calendário.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>GOLEIRO PRO</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1713;--panel:#14251e;--panel2:#1b3027;--line:#2b4438;--text:#f2f7f3;--muted:#a8b9ae;--lime:#b8f36b;--green:#173d2c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:auto;padding:14px 14px calc(28px + env(safe-area-inset-bottom))}.hero{background:linear-gradient(135deg,#102c23,#1c4a34);border-radius:20px;padding:20px;margin-top:6px}.eyebrow{font-size:11px;letter-spacing:2px;color:var(--lime);font-weight:800}.brand{font-size:30px;font-weight:950;letter-spacing:-1px;margin:4px 0}.brand span{color:var(--lime)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}.stat strong{font-size:24px;display:block}.stat small{color:#c4d5ca}.progressline{height:7px;border-radius:20px;background:#ffffff30;margin-top:8px;overflow:hidden}.progressline div{height:100%;background:var(--lime);width:0}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;background:#101f18;padding:5px;border-radius:13px;margin:14px 0}.tab{border:0;background:transparent;color:var(--muted);padding:11px 3px;border-radius:10px;font-size:12px;font-weight:800}.tab.active{background:var(--lime);color:#172719}.view{display:none}.view.active{display:block}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.muted{color:var(--muted)}.small{font-size:12px}.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin:12px 0}.day{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;padding:11px 0;font-size:12px;font-weight:800}.day.selected{background:var(--lime);color:#172719;border-color:var(--lime)}.day.done{box-shadow:inset 0 -3px #8fc94e}.tag{background:var(--panel2);color:var(--lime);border-radius:20px;padding:5px 9px;font-size:10px;font-weight:800}.exercise{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.exercise:last-child{border:0}.exercise input{width:20px;height:20px;accent-color:var(--lime)}.exercise-main{flex:1;min-width:0}.exercise-name{font-weight:700;font-size:14px}.exercise-meta{font-size:11px;color:var(--muted)}.sets{font-size:12px;font-weight:800;white-space:nowrap}.video{font-size:11px;color:var(--lime);white-space:nowrap}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:11px 13px;border-radius:11px;font-weight:750;font-size:13px}.primary{background:var(--lime);color:#172719;border-color:var(--lime)}.full{width:100%}.bar{height:7px;background:var(--panel2);border-radius:20px;overflow:hidden;margin-top:8px}.bar div{height:100%;background:var(--lime);width:0}.timer{font-size:42px;font-weight:900;font-variant-numeric:tabular-nums}.field{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:#0d1b15;color:var(--text);margin-top:5px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.label{font-size:12px;color:var(--muted);display:block}.health-note{font-size:12px;line-height:1.5;color:var(--muted)}.calendar-day{padding:12px 0;border-bottom:1px solid var(--line)}.checks{display:flex;flex-wrap:wrap;gap:14px;margin-top:9px;font-size:12px}.checks label{display:flex;align-items:center;gap:5px}.checks input{accent-color:var(--lime)}.history-item{padding:12px;border-radius:12px;background:var(--panel);border:1px solid var(--line);margin:8px 0}.notice{border-left:3px solid var(--lime);padding:10px 12px;background:#17291f;border-radius:8px;font-size:12px;line-height:1.5}.hidden{display:none!important}input[type=number]{min-width:0}textarea{resize:vertical}footer{text-align:center;color:var(--muted);font-size:10px;padding:18px 0}h2{font-size:19px;margin:6px 0}h3{font-size:16px;margin:0}.weeknav{display:flex;align-items:center;justify-content:space-between;gap:10px}.install{display:none;margin-top:12px}.install.show{display:block}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="hero">
+ <div class="row"><div><div class="eyebrow">ATHLETE PERFORMANCE SYSTEM</div><div class="brand">GOLEIRO <span>PRO</span></div><div class="small" style="color:#d0e0d5">Sua preparação começa aqui.</div></div><div style="font-size:42px">🥅</div></div>
+ <div class="stats"><div class="stat"><strong>87 <small>kg</small></strong><small>Peso inicial</small></div><div class="stat"><strong>40 <small>min</small></strong><small>Academia</small></div><div class="stat"><strong>8 <small>sem</small></strong><small>Programa</small></div></div>
+ <div class="row small" style="margin-top:18px"><span>PROGRESSO DOS TREINOS</span><b id="overall">0%</b></div><div class="progressline"><div id="overallbar"></div></div>
+ <button id="installBtn" class="btn primary full install">＋ Instalar GOLEIRO PRO</button>
+</header>
+<nav class="tabs">
+ <button class="tab active" data-tab="training">🏋️ Treinos</button><button class="tab" data-tab="progress">📈 Evolução</button><button class="tab" data-tab="calendar">📅 Calendário</button><button class="tab" data-tab="history">📋 Histórico</button>
+</nav>
+<section class="view active" id="training">
+ <div class="row"><div><h2>Plano semanal</h2><div class="small muted">Selecione o dia para abrir a sessão.</div></div><span class="tag">8 SEMANAS</span></div>
+ <div class="days" id="days"></div>
+ <div class="panel">
+  <div class="row"><div><div class="small muted" id="dayname"></div><h2 id="worktitle">Força geral</h2><div class="small muted" id="worksub"></div></div><span class="tag">40 MIN</span></div>
+  <div class="row small muted" style="margin-top:18px"><span>Exercícios concluídos</span><b id="count">0/5</b></div><div class="bar"><div id="workbar"></div></div>
+  <div id="exercises"></div>
+  <div class="grid2" style="margin-top:12px"><button class="btn primary" id="finish">Concluir treino</button><button class="btn" id="reset">Reiniciar marcações</button></div>
+ </div>
+ <div class="panel"><h3>⏱️ Cronômetro de descanso</h3><p class="small muted">Use entre as séries. Ajuste em intervalos de 15 segundos.</p><div class="row" style="justify-content:center;gap:18px;margin:14px 0"><button class="btn" id="minus">−15s</button><div class="timer" id="clock">01:30</div><button class="btn" id="plus">+15s</button></div><div class="grid2"><button class="btn primary" id="start">▶ Iniciar</button><button class="btn" id="zero">↺ Zerar</button></div></div>
+ <div class="notice">⚠️ Enquanto houver desconforto nos joelhos, não faça saltos ou movimentos que provoquem dor. Se o incômodo persistir, procure avaliação de fisioterapeuta ou médico do esporte.</div>
+</section>
+<section class="view" id="progress">
+ <h2>Sua evolução</h2><p class="small muted">Registre seus indicadores periodicamente.</p>
+ <div class="grid2"><div class="panel"><div class="small muted">Peso mais recente</div><div style="font-size:26px;font-weight:900" id="lastweight">87 kg</div></div><div class="panel"><div class="small muted">Cintura mais recente</div><div style="font-size:26px;font-weight:900" id="lastwaist">— cm</div></div></div>
+ <form class="panel" id="measureform"><h3>Registrar avaliação</h3><div class="grid2" style="margin-top:12px"><label class="label">Peso (kg)<input class="field" type="number" id="weight" min="30" max="250" step=".1" placeholder="87" required></label><label class="label">Cintura (cm)<input class="field" type="number" id="waist" min="40" max="200" step=".1" placeholder="Opcional"></label><label class="label">Impulsão (cm)<input class="field" type="number" id="jump" min="0" max="150" placeholder="Opcional"></label><label class="label">Agilidade (s)<input class="field" type="number" id="agility" min="0" max="300" step=".01" placeholder="Opcional"></label></div><label class="label" style="margin-top:12px">Observações<textarea class="field" id="note" rows="2" placeholder="Como você se sentiu?"></textarea></label><button class="btn primary full" style="margin-top:12px">Salvar avaliação</button></form>
+ <div class="panel"><h3>Saúde e recuperação</h3><p class="small muted">Registre como seu corpo está respondendo.</p><label class="label">Desconforto no joelho<select class="field" id="pain"><option>Sem dor</option><option>Leve</option><option>Moderado</option><option>Forte</option></select></label><label class="label" style="margin-top:10px">Fadiga nas pernas<select class="field" id="fatigue"><option>Leve</option><option>Moderada</option><option>Alta</option></select></label><button class="btn primary full" id="savehealth" style="margin-top:12px">Salvar recuperação</button><p class="small muted" id="healthmsg"></p></div>
+</section>
+<section class="view" id="calendar">
+ <h2>Calendário</h2><p class="small muted">Marque as atividades realizadas em cada dia.</p><div class="panel"><div class="weeknav"><button class="btn" id="prev">‹</button><b id="weeklabel"></b><button class="btn" id="next">›</button></div><div id="calendarDays" style="margin-top:10px"></div></div>
+ <div class="notice">Se houver jogo ou treino intenso de campo, reduza a carga da academia. Domingo é reservado à recuperação.</div>
+</section>
+<section class="view" id="history">
+ <h2>Histórico</h2><p class="small muted">Registros armazenados neste aparelho.</p><div id="historylist"></div><button class="btn primary full" id="export" style="margin-top:12px">Exportar meus registros</button><button class="btn full" id="clear" style="margin-top:8px;color:#ffad91">Apagar dados salvos</button>
+</section>
+<footer>GOLEIRO PRO • MENOS GORDURA, MAIS FORÇA E QUALIDADE DEBAIXO DAS TRAVES.</footer>
+</main>
+<script src="app.js"></script>
+</body></html>

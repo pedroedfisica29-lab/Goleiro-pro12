@@ -1,0 +1,27 @@
+GOLEIRO PRO — COMO COLOCAR NO CELULAR
+
+O que vem neste pacote:
+- index.html: aplicativo
+- app.js: treinos, cronômetro, calendário e registros
+- manifest.webmanifest: configuração de instalação
+- sw.js: suporte offline
+- ícones do aplicativo
+
+IMPORTANTE:
+Para instalar como aplicativo PWA, os arquivos precisam estar hospedados em um endereço HTTPS.
+Abrir o index.html diretamente pelo gerenciador de arquivos não instala o app e pode impedir o modo offline.
+
+COMO INSTALAR NO ANDROID:
+1. Publique a pasta inteira em um serviço de hospedagem HTTPS (por exemplo, GitHub Pages ou Netlify).
+2. Abra o endereço publicado no Google Chrome do celular.
+3. Toque no menu ⋮ e escolha "Instalar app" ou "Adicionar à tela inicial".
+4. Confirme. O ícone GOLEIRO PRO aparecerá na tela inicial.
+
+DADOS:
+Os registros são guardados no armazenamento local do navegador/aplicativo neste aparelho. Use "Exportar meus registros" para fazer uma cópia. Limpar os dados do navegador pode apagar esses registros.
+
+VÍDEOS:
+Os links de vídeo fazem pesquisas no YouTube; precisam de internet.
+O plano reproduz os treinos enviados pelo usuário. A progressão de potência/saltos deve respeitar a condição dos joelhos e avaliação profissional.
+
+Este pacote é uma versão PWA instalável, não um APK nem um aplicativo publicado na Play Store.
